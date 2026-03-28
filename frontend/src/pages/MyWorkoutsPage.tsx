@@ -1,8 +1,11 @@
+import ButtonComponent from "../components/ButtonComponent"
+
+
 const MyWorkoutsPage = () => {
   return (
     <div>
       my workouts
-
+    <ButtonComponent buttonTitle="Add Workout"/>
 {/* Add workout button and My Workouts */}
 
 {/* All workouts in cards */}
