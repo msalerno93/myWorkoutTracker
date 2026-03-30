@@ -1,8 +1,17 @@
 import Button from "@mui/material/Button";
 
-      {/* re-usable button that pulls in title from other components */}
+{
+  /* re-usable button that pulls in title from other components */
+}
 
-const ButtonComponent = ({buttonTitle}: {buttonTitle: string}) => {
+interface ButtonComponentProps {
+  buttonTitle: string;
+  buttonAction: () => void;
+}
+
+const ButtonComponent = (
+  { buttonTitle, buttonAction }: ButtonComponentProps
+) => {
   return (
     <>
       <Button
@@ -15,6 +24,7 @@ const ButtonComponent = ({buttonTitle}: {buttonTitle: string}) => {
             backgroundColor: "#6a3f67", // or whatever hover color you want
           },
         }}
+        onClick={buttonAction}
       >
         {buttonTitle}
       </Button>

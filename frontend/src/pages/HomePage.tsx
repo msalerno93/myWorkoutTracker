@@ -18,10 +18,10 @@ const HomePage = () => {
           </Typography>
         </Box>
       </Box>
-      {/* Add workout button - will pull up modal to add workout*/}
+      {/* Add workout button - will pull up modal to add workout
       <Box>
         <ButtonComponent buttonTitle="Add Workout" />
-      </Box>
+      </Box> */}
       {/* View All Workouts Box - uses Link within Button */}
       <Box sx={{ marginTop: "30px" }}>
         <Button
