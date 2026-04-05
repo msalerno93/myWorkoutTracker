@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ButtonComponent from "../components/ButtonComponent";
 import WorkoutCardComponent from "../components/WorkoutCardComponent";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import PopUpModal from "../components/PopUpModal";
 
 interface Exercise {
@@ -79,10 +79,15 @@ const MyWorkoutsPage = () => {
 
   const buttonAction = () => {
     setIsModalOpen(true);
-  }
+  };
 
   return (
-    <div>
+    <div style={{paddingTop: "30px"}}>
+      <Box>
+        <Typography variant="h3" component="h3" sx={{ color: "#daaeee" }}>
+          My Workouts
+        </Typography>
+      </Box>
       {/* Top-left Add Workout button */}
       <Box sx={{ padding: 3, display: "flex", justifyContent: "flex-start" }}>
         <ButtonComponent
@@ -90,6 +95,7 @@ const MyWorkoutsPage = () => {
           buttonAction={buttonAction}
         />
       </Box>
+      {/* {Pop up Modal to show when button is clicked} */}
       <PopUpModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* Grid of workouts */}
       <Box sx={{ padding: 3 }}>

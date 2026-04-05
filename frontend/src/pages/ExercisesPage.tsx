@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ButtonComponent from "../components/ButtonComponent";
 import ExercisesTableComponent from "../components/ExercisesTableComponent";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import PopUpModal from "../components/PopUpModal";
 
 const ExercisesPage = () => {
@@ -11,7 +11,12 @@ const ExercisesPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ paddingTop: "30px" }}>
+      <Box>
+        <Typography variant="h3" component="h3" sx={{ color: "#daaeee" }}>
+          All Exercises
+        </Typography>
+      </Box>
       <Box sx={{ padding: 3, display: "flex", justifyContent: "flex-start" }}>
         <ButtonComponent
           buttonTitle="Add Exercise"

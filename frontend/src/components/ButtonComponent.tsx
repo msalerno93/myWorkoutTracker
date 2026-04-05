@@ -1,15 +1,20 @@
-import Button from "@mui/material/Button";
-
 {
   /* re-usable button that pulls in title from other components */
 }
 
+import Button from "@mui/material/Button";
+
+{
+  /* TS specific to show type */
+}
 interface ButtonComponentProps {
   buttonTitle: string;
   buttonAction: () => void;
 }
 
 const ButtonComponent = (
+  
+  /* pulls prop types from ButtonComponentProps interface */
   { buttonTitle, buttonAction }: ButtonComponentProps
 ) => {
   return (
